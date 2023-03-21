@@ -39,3 +39,8 @@
   margin-right: 40px;
   border-right: 2px solid gainsboro;
 }
+
+.active__link {
+  color: yellow;
+  text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+.rocket_card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.rocket_card img {
+  width: 200px;
+  height: auto;
+  margin-right: 60px;
+}

@@ -41,7 +41,11 @@ const Root = () => {
             <h1>Space Travlers' Hub</h1>
           </section>
           <section className="nav__link-right">
-            <NavLink className="nav__link-links rockets" to="/Rockets">
+            <NavLink
+              className="nav__link-links rockets"
+              to="/Rockets"
+              activeClassName="active__link"
+            >
               Rockets
             </NavLink>
             <NavLink className="nav__link-links missions" to="/Missions">
