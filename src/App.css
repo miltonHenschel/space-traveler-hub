@@ -37,5 +37,6 @@
 
 .missions {
   margin-right: 40px;
-  border-right: 2px solid gainsboro;
+  border-right: 2px solid #000;
+  padding-right: 2rem;
 }

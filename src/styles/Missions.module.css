@@ -1,0 +1,31 @@
+.table {
+  border-collapse: collapse;
+}
+
+.tr,
+.th,
+.td,
+.tdMiddle {
+  border: 1px solid;
+  text-align: left;
+}
+
+.tr,
+.th,
+.td {
+  vertical-align: top;
+}
+
+.tdMiddle {
+  border: 1px solid;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.theadTr {
+  border: 1px solid;
+}
