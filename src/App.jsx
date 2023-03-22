@@ -1,16 +1,14 @@
-import { useState } from 'react';
 import './App.css';
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Link,
   NavLink,
   Outlet,
   RouterProvider,
 } from 'react-router-dom';
 import Rockets from './components/Rockets';
-import Missions from './components/Missions';
+import MissionsPage from './components/missions/MissionsPage';
 import Profile from './components/Profile';
 
 function App() {
@@ -18,10 +16,10 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route path="/Rockets" element={<Rockets />} />
-        <Route index="/" element={<Missions />} />
+        <Route path="/Missions" element={<MissionsPage />} />
         <Route path="/Profile" element={<Profile />} />
-      </Route>
-    )
+      </Route>,
+    ),
   );
 
   return (
@@ -37,22 +35,37 @@ const Root = () => (
       <section className="nav__link">
         <section className="nav__link-left">
           <img src="./src/assets/planet.png" alt="" />
-          <h1>Space Travlers' Hub</h1>
+          <h1>Space Travlers&apos; Hub</h1>
         </section>
         <section className="nav__link-right">
           <NavLink
             className="nav__link-links rockets"
             style={({ isActive }) => ({
-              color: isActive ? '#0290ff' : '#121212',
+              color: isActive ? '#00f' : '#000',
+              textDecoration: isActive ? 'underline' : 'none',
             })}
             to="/Rockets"
           >
             Rockets
           </NavLink>
-          <NavLink className="nav__link-links missions" to="/Missions">
+          <NavLink
+            className="nav__link-links missions"
+            style={({ isActive }) => ({
+              color: isActive ? '#00f' : '#000',
+              textDecoration: isActive ? 'underline' : 'none',
+            })}
+            to="/Missions"
+          >
             Missions
           </NavLink>
-          <NavLink className="nav__link-links profiles" to="/Profile">
+          <NavLink
+            className="nav__link-links profiles"
+            style={({ isActive }) => ({
+              color: isActive ? '#00f' : '#000',
+              textDecoration: isActive ? 'underline' : 'none',
+            })}
+            to="/Profile"
+          >
             Profile
           </NavLink>
         </section>
