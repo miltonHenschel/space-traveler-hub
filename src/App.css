@@ -40,3 +40,8 @@
   border-right: 2px solid #000;
   padding-right: 2rem;
 }
+
+.active__link {
+  color: yellow;
+  text-decoration: underline;
+}
