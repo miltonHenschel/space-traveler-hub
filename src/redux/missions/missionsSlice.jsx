@@ -48,14 +48,10 @@ const missionsSlice = createSlice({
         }),
         isLoading: false,
       }));
-    // .addCase(fetchMissionsFromAPI.rejected, (state) => ({
-    //   ...state,
-    // }))
-    // .addCase(joinMissions.fulfilled, (state) => ({
-    //   ...state,
-    // }));
   },
 });
+
+export const stateMissions = (state) => state.missions.missionsItems;
 
 export const { joinMissions, leaveMissions } = missionsSlice.actions;
 
