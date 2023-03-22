@@ -16,7 +16,8 @@
   vertical-align: top;
 }
 
-.td {
+.td,
+.th {
   padding: 0.5rem;
 }
 
