@@ -16,10 +16,15 @@
   vertical-align: top;
 }
 
+.td {
+  padding: 0.5rem;
+}
+
 .tdMiddle {
   border: 1px solid;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
+  width: 10vw;
 }
 
 .tr:nth-child(odd) {
@@ -28,4 +33,34 @@
 
 .theadTr {
   border: 1px solid;
+}
+
+.joinMission {
+  color: #1a1a1a;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.leaveMission {
+  color: #f00;
+  border-color: #f00;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.activeMember {
+  background-color: #00f;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 10vw;
+}
+
+.notMember {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 10vw;
 }

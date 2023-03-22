@@ -8,12 +8,14 @@ import Missions from './Missions';
 
 function MissionsPage() {
   const missions = useSelector((state) => state.missions);
+  const isLoading = useSelector((state) => state.missions.isLoading);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchMissionsFromAPI());
   }, [dispatch]);
+
   return (
     <table className={styles.table}>
       <thead>
@@ -27,14 +29,17 @@ function MissionsPage() {
         </tr>
       </thead>
       <tbody>
-        {missions.missionsItems.map((mission) => (
-          <Missions
-            key={mission.mission_id}
-            mission_id={mission.mission_id}
-            mission_name={mission.mission_name}
-            description={mission.description}
-          />
-        ))}
+        {isLoading && <tr className={styles.tr}>Loading...</tr>}
+        {!isLoading
+          && missions.missionsItems.map((mission) => (
+            <Missions
+              key={mission.mission_id}
+              mission_id={mission.mission_id}
+              mission_name={mission.mission_name}
+              description={mission.description}
+              reserved={mission.reserved}
+            />
+          ))}
       </tbody>
     </table>
   );
