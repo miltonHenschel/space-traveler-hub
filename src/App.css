@@ -29,6 +29,7 @@
 
 .nav__link-links {
   text-decoration: none;
+  color: rgb(21, 109, 250);
 }
 
 .rockets {
@@ -42,8 +43,4 @@
 
 a.active {
   text-decoration: underline;
-}
-
-.nav__link-links {
-  color: rgb(21, 109, 250);
 }
