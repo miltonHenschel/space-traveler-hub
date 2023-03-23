@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../../redux/rocket/rcktreducer';
+import { reserveRocket } from '../../redux/rocket/rocketSlice';
 import classes from './rocketItem.module.css';
 
 const RocketCardItem = (props) => {
