@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRocketsInformation } from "../redux/rockets/rocketAction";
 import classes from "./rockets.module.css";
+import { reserveRocket } from "../redux/rockets/rocketSlice";
+import { getReserved } from "../redux/rockets/rocketSlice";
 
 const Rockets = () => {
   let saveReserve = false;
@@ -15,7 +17,10 @@ const Rockets = () => {
     }
   }, []);
 
-  console.log(rockets.id);
+  const onClickReserveRocket = (e) => {
+    dispatch(reserveRocket(e.target.id));
+  };
+  console.log(rockets);
 
   return (
     <section>
@@ -30,8 +35,8 @@ const Rockets = () => {
               <h1>{rocket.id}</h1>
               <h2>{rocket.description}</h2>
               <button
-                onClick={() => {
-                  console.log("clicked");
+                onClick={(e) => {
+                  onClickReserveRocket(e);
                 }}
               >
                 Reseve Rocket

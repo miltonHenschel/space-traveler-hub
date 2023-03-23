@@ -40,7 +40,10 @@
   border-right: 2px solid gainsboro;
 }
 
-.active__link {
-  color: yellow;
+a.active {
   text-decoration: underline;
+}
+
+.nav__link-links {
+  color: rgb(21, 109, 250);
 }
