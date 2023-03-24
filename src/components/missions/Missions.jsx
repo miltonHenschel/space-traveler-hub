@@ -15,7 +15,6 @@ function Missions({
   const dispatch = useDispatch();
 
   const handleJoinMission = () => {
-    // console.log(e.target);
     dispatch(joinMissions(mission_id));
   };
 

@@ -1,22 +1,19 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import {
-  fetchMissionsFromAPI,
-  stateMissions,
-} from '../../redux/missions/missionsSlice';
+import { fetchMissionsFromAPI } from '../../redux/missions/missionsSlice';
 
 import styles from '../../styles/Missions.module.css';
 import Missions from './Missions';
 
 function MissionsPage() {
-  const missions = useSelector(stateMissions);
+  const missions = useSelector((state) => state.missions);
   const isLoading = useSelector((state) => state.missions.isLoading);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissionsFromAPI());
-  }, [dispatch]);
+    if (!missions.missionsItems.length) dispatch(fetchMissionsFromAPI());
+  }, [dispatch, missions.missionsItems.length]);
 
   return (
     <table className={styles.table}>
@@ -33,7 +30,7 @@ function MissionsPage() {
       <tbody>
         {isLoading && <tr className={styles.tr}>Loading...</tr>}
         {!isLoading
-          && missions.map((mission) => (
+          && missions.missionsItems.map((mission) => (
             <Missions
               key={mission.mission_id}
               mission_id={mission.mission_id}
