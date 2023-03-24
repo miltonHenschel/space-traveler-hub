@@ -15,7 +15,7 @@ const Rockets = () => {
       saveReserve = true;
       dispatch(fetchingRocketsInfo());
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <Container>

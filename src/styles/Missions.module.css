@@ -1,0 +1,73 @@
+.table {
+  border-collapse: collapse;
+}
+
+.tr,
+.th,
+.td,
+.tdMiddle {
+  border: 1px solid;
+  text-align: left;
+}
+
+.tr,
+.th,
+.td {
+  vertical-align: top;
+}
+
+.td,
+.th {
+  padding: 0.5rem;
+}
+
+.tdMiddle {
+  border: 1px solid;
+  text-align: center;
+  vertical-align: middle;
+  width: 10vw;
+}
+
+.tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.theadTr {
+  border: 1px solid;
+}
+
+.joinMission {
+  color: #1a1a1a;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: auto;
+  margin: auto;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.leaveMission {
+  color: #1a1a1a;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: auto;
+  margin: auto;
+  border: 1px solid #f00;
+  background-color: #fff;
+}
+
+.activeMember {
+  background-color: #00f;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 10vw;
+}
+
+.notMember {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 10vw;
+}

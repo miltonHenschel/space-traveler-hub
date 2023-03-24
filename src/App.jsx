@@ -1,4 +1,5 @@
-import './App.css';
+import React from 'react';
+import './styles/App.css';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -8,15 +9,15 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import Rockets from './components/Rocket/rockets';
-import Missions from './components/Rocket/Missions';
-import Profile from './components/Profiles';
+import MissionsPage from './components/missions/MissionsPage';
+import Profile from './components/Profile/Profile';
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route path="/Rockets" element={<Rockets />} />
-        <Route index="/" element={<Missions />} />
+        <Route path="/Missions" element={<MissionsPage />} />
         <Route path="/Profile" element={<Profile />} />
       </Route>,
     ),
